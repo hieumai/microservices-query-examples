@@ -43,6 +43,7 @@ if(isProduction){
 
 import './models';
 import routes from './routes';
+import { SERVICE_LOCAL_PORT } from '../constants';
 
 const seeder = new Seeder(databaseConfig);
 const seedDataCollections = seeder.readCollectionsFromPath(path.resolve("./seed-data"));
@@ -92,6 +93,6 @@ app.use(function(err, req, res, next) {
 });
 
 // finally, let's start our server...
-const server = app.listen( process.env.PORT || 1111, function() {
+const server = app.listen( process.env.PORT || SERVICE_LOCAL_PORT.kitchen, function() {
   console.log('Listening on port ' + server.address().port);
 });
