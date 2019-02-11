@@ -1,8 +1,9 @@
 # Introduction
 
-Accounting Service enables a restaurant to manage payments for orders
-The main aggregate in this service are the Bill aggregate
-The Bill represents a payment made for an order and its status
+Delivery Service enables a restaurant to manage deliveries for orders
+The two main aggregates in this service are the Delivery and the Shipper aggregates
+The Delivery represents a delivery made for an order and its status
+The Shipper represents a shipper that can be assigned for the delivery
 
 # Getting started
 

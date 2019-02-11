@@ -5,7 +5,7 @@ const router = express.Router();
 const Restaurant = mongoose.model('Restaurant');
 
 /**
- * Find employees by criteria
+ * Find restaurants by criteria
  */
 router.get('/', (req, res, next) => {
   return Restaurant.find(req.query)
@@ -13,7 +13,7 @@ router.get('/', (req, res, next) => {
 });
 
 /**
- * Get employee by id
+ * Find restaurant by id
  */
 router.get('/:id', (req, res, next) => {
   Restaurant.findById(req.params.id)

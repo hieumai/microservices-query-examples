@@ -1,6 +1,6 @@
 import mongoose from 'mongoose';
 
-const RestaurantSchema = new mongoose.Schema({
+const ShipperSchema = new mongoose.Schema({
   id: {
     type: String,
     required: [true, 'can\'t be blank'],
@@ -13,6 +13,7 @@ const RestaurantSchema = new mongoose.Schema({
     required: [true, 'can\'t be blank'],
     index: true
   }
+
 }, { timestamps: true });
 
-mongoose.model('Restaurant', RestaurantSchema);
+mongoose.model('Shipper', ShipperSchema);

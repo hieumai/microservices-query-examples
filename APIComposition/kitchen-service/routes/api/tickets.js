@@ -5,7 +5,7 @@ const router = express.Router();
 const Ticket = mongoose.model('Ticket');
 
 /**
- * Find employees by criteria
+ * Find tickets by criteria
  */
 router.get('/', (req, res, next) => {
   return Ticket.find(req.query)
@@ -13,7 +13,7 @@ router.get('/', (req, res, next) => {
 });
 
 /**
- * Get employee by id
+ * Find ticket by id
  */
 router.get('/:id', (req, res, next) => {
   Ticket.findById(req.params.id)

@@ -1,29 +1,28 @@
 import mongoose from 'mongoose';
 
-const TicketSchema = new mongoose.Schema({
+const DeliverySchema = new mongoose.Schema({
   id: {
     type: String,
     required: [true, 'can\'t be blank'],
-    unique: true,
+    unique : true,
     dropDups: true,
     index: true
   },
   orderId: {
     type: String,
     required: [true, 'can\'t be blank'],
-    unique: true,
+    unique : true,
     dropDups: true,
     index: true
   },
   status: {
     type: String,
-    enum: ['NOT_STARTED', 'IN_PROGRESS', 'PREPARED', 'DONE'],
+    enum: ['NOT_STARTED', 'ASSIGNED', 'PICKED_UP', 'DONE'],
     required: [true, 'can\'t be blank'],
     index: true
   },
-  restaurantId: {
+  shipperId: {
     type: String,
-    required: [true, 'can\'t be blank'],
     index: true
   },
   acceptTime: {
@@ -32,10 +31,10 @@ const TicketSchema = new mongoose.Schema({
   pickedUpTime: {
     type: Date
   },
-  readyForPickupTime: {
+  completedTime: {
     type: Date
   }
 
 }, { timestamps: true });
 
-mongoose.model('Ticket', TicketSchema);
+mongoose.model('Delivery', DeliverySchema);

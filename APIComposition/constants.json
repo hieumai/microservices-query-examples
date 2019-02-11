@@ -1,6 +1,7 @@
 {
   "SERVICE_LOCAL_PORT": {
     "kitchen": 1111,
-    "accounting": 2222
+    "accounting": 2222,
+    "delivery": 3333
   }
 }
