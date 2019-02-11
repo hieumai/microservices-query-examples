@@ -1,0 +1,17 @@
+[
+  {
+    "id": "1",
+    "customerName": "Mary Winston",
+    "orderTime": "2016-05-18T15:00:00Z"
+  },
+  {
+    "id": "2",
+    "customerName": "Kate Upton",
+    "orderTime": "2016-05-18T23:00:00Z"
+  },
+  {
+    "id": "3",
+    "customerName": "Lily Salad",
+    "orderTime": "2016-05-18T15:30:00Z"
+  }
+]
