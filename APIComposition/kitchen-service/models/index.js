@@ -1,1 +1,2 @@
 require('./Ticket');
+require('./Restaurant');

@@ -1,5 +1,10 @@
-var router = require('express').Router();
+import express from 'express';
+import tickets from './tickets';
+import restaurants from './restaurants';
 
-router.use('/tickets', require('./tickets'));
+const router = express.Router();
 
-module.exports = router;
+router.use('/tickets', tickets);
+router.use('/restaurants', restaurants);
+
+export default router;
