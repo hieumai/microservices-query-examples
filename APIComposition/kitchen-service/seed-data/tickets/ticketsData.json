@@ -1,0 +1,22 @@
+[
+  {
+    "orderId": "1",
+    "ticketState": "COMPLETED",
+    "restaurantId": "1",
+    "acceptTime": "2016-05-18T16:00:00Z",
+    "pickedUpTime": "2016-06-18T18:00:00Z",
+    "readyForPickupTime": "2016-06-18T16:00:00Z"
+  },
+  {
+    "orderId": "2",
+    "ticketState": "NOT_STARTED",
+    "restaurantId": "1"
+  },
+  {
+    "orderId": "3",
+    "ticketState": "IN_PROGRESS",
+    "restaurantId": "2",
+    "acceptTime": "2016-05-18T16:00:00Z",
+    "readyForPickupTime": "2016-06-18T14:00:00Z"
+  }
+]
