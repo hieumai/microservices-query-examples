@@ -1,8 +1,6 @@
 {
   "SERVICE_LOCAL_PORT": {
-    "kitchen": 1111
-  },
-  "SERVICE_URL": {
-    "kitchen": "http://localhost:1111"
+    "kitchen": 1111,
+    "accounting": 2222
   }
 }
