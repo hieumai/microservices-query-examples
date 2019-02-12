@@ -8,7 +8,7 @@ const Bill = mongoose.model('Bill');
  * Find bills by criteria
  */
 router.get('/', (req, res, next) => {
-  return Bill.find(req.query)
+  return Bill.find(req.query, { '_id': 0 })
     .then(bills => res.json(bills)).catch(next);
 });
 
@@ -17,7 +17,7 @@ router.get('/', (req, res, next) => {
  */
 router.get('/:id', (req, res, next) => {
   const query = { id: req.params.id };
-  Bill.findOne(query)
+  Bill.findOne(query, { '_id': 0 })
     .then(bill => !bill ? res.sendStatus(404) : res.json(bill))
     .catch(next);
 });
