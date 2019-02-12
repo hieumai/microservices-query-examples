@@ -16,8 +16,9 @@ router.get('/', (req, res, next) => {
  * Get employee by id
  */
 router.get('/:id', (req, res, next) => {
-  Delivery.findById(req.params.id)
-    .then(delivery => !delivery.id ? res.sendStatus(404) : res.json(delivery))
+  const query = { id: req.params.id };
+  Delivery.findOne(query)
+    .then(delivery => !delivery ? res.sendStatus(404) : res.json(delivery))
     .catch(next);
 });
 

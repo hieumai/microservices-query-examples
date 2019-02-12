@@ -16,8 +16,9 @@ router.get('/', (req, res, next) => {
  * Find bill by id
  */
 router.get('/:id', (req, res, next) => {
-  Bill.findById(req.params.id)
-    .then(bill => !bill.id ? res.sendStatus(404) : res.json(bill))
+  const query = { id: req.params.id };
+  Bill.findOne(query)
+    .then(bill => !bill ? res.sendStatus(404) : res.json(bill))
     .catch(next);
 });
 

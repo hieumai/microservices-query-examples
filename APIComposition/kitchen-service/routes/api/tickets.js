@@ -16,8 +16,9 @@ router.get('/', (req, res, next) => {
  * Find ticket by id
  */
 router.get('/:id', (req, res, next) => {
-  Ticket.findById(req.params.id)
-    .then(ticket => !ticket.id ? res.sendStatus(404) : res.json(ticket))
+  const query = { id: req.params.id };
+  Ticket.findOne(query)
+    .then(ticket => !ticket ? res.sendStatus(404) : res.json(ticket))
     .catch(next);
 });
 

@@ -16,8 +16,9 @@ router.get('/', (req, res, next) => {
  * Find order by id
  */
 router.get('/:id', (req, res, next) => {
-  Order.findById(req.params.id)
-    .then(order => !order.id ? res.sendStatus(404) : res.json(order))
+  const query = { id: req.params.id };
+  Order.findOne(query)
+    .then(order => !order ? res.sendStatus(404) : res.json(order))
     .catch(next);
 });
 

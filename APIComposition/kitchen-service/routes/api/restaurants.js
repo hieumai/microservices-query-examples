@@ -16,8 +16,9 @@ router.get('/', (req, res, next) => {
  * Find restaurant by id
  */
 router.get('/:id', (req, res, next) => {
-  Restaurant.findById(req.params.id)
-    .then(restaurant => !restaurant.id ? res.sendStatus(404) : res.json(restaurant))
+  const query = { id: req.params.id };
+  Restaurant.findOne(query)
+    .then(restaurant => !restaurant ? res.sendStatus(404) : res.json(restaurant))
     .catch(next);
 });
 
