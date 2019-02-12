@@ -1,17 +1,14 @@
 [
   {
     "id": "1",
-    "orderId": "1",
-    "status": "PAID"
+    "name": "Shipper 1"
   },
   {
     "id": "2",
-    "orderId": "2",
-    "status": "UNPAID"
+    "name": "Shipper 2"
   },
   {
     "id": "3",
-    "orderId": "3",
-    "status": "PAID"
+    "name": "Shipper 3"
   }
 ]

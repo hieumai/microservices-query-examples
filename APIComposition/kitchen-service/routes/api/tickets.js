@@ -47,7 +47,6 @@ router.get('/:id', async (req, res, next) => {
   } catch (error) {
     next(error);
   }
-
 });
 
 export default router;
