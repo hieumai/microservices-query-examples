@@ -3,6 +3,7 @@
     "kitchen": 1111,
     "accounting": 2222,
     "delivery": 3333,
-    "order": 4444
+    "order": 4444,
+    "apiGateway": 5555
   }
 }
