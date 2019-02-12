@@ -8,7 +8,7 @@ const Order = mongoose.model('Order');
  * Find orders by criteria
  */
 router.get('/', (req, res, next) => {
-  return Order.find(req.query)
+  return Order.find(req.query, { '_id': 0 })
     .then(orders => res.json(orders)).catch(next);
 });
 
@@ -17,7 +17,7 @@ router.get('/', (req, res, next) => {
  */
 router.get('/:id', (req, res, next) => {
   const query = { id: req.params.id };
-  Order.findOne(query)
+  Order.findOne(query, { '_id': 0 })
     .then(order => !order ? res.sendStatus(404) : res.json(order))
     .catch(next);
 });
