@@ -31,8 +31,8 @@ router.get('/:id', async (req, res, next) => {
     const orderObservable = from(rp(SERVICES_CONNECT_OPTIONS.order(`orders/${req.params.id}`)))
       .pipe(map(order => { return { order } }));
 
-    const example = forkJoin(ticketObservable, billObservable, deliveryObservable, orderObservable);
-    example.subscribe(val => {
+    forkJoin(ticketObservable, billObservable, deliveryObservable, orderObservable)
+      .subscribe(val => {
       const result = val.reduce((acc, item) => {
         return {
           ...acc,
